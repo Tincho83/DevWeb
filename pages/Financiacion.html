@@ -1,0 +1,387 @@
+<!--
+*********************************************************
+Autor: MH
+Version: 20240111.1953
+Descripcion: TP #2 (FlexBox, Grid, Bootstrap, Git, GitHub) Desarrollo Web para CoderHouse
+*********************************************************
+financiacion.html 
+https://tincho83.github.io/FullStack_1DesarrolloWeb/
+https://github.com/Tincho83/FullStack_1DesarrolloWeb
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+*********************************************************
+-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Descripcion de sitio y SEO -->
+    <meta name="description"
+        content="Consulta en IOcom los metodos de financiacion que tenemos para los productos informaticos que elijas y aprovecha las mejores opciones de financiacion.">
+    <meta name="keywords"
+        content="IOCOM, acceso cuenta Tienda de venta de productos de Informatica Computacion Servicio Tecnico Cordoba Argentina">
+    <!-- <link rel="icon" type="image/svg" href="../imgs/logo.svg" sizes="32x32"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico">
+    <title>Tienda Informatica IO.com - Metodos de Financiacion</title>
+
+    <!-- link Bootstraps Online -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- link Fuente TrueFont Online -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- link CSS -->
+    <!-- <link rel="preload" href="../css/estilo.css" as="style"> -->
+    <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+
+</head>
+
+<body>
+
+    <!-- Inicio: mensaje si posee una pantalla incompatible -->
+    <div class="webSite_msjPantallaincompat">Use una pantalla que tenga 320px o superior en horizontal.</div>
+    <!-- Fin: mensaje si posee una pantalla incompatible -->
+
+
+    <!-- Inicio: Cabecera contiene vinculos superiores horizontales -->
+    <header class="cabecera" id="inicio">
+
+        <!-- Inicio: vinculos superiores horizontales -->
+        <div class="cabecera_divEnlacesHorizontales">
+            <ul class="cabecera_divEnlacesHorizontales_ul">
+                <li class="cabecera_divEnlacesHorizontales_ul_li">
+                    <a href="https://www.correoargentino.com.ar/" class="cabecera_divEnlacesHorizontales_ul_li_a"
+                        target="_blank">
+                        <img src="../imgs/enviosdeliverycorreo.png" alt="Segui tu Compra"
+                            class="cabecera_divEnlacesHorizontales_ul_li_a_img">
+                        <p class="cabecera_divEnlacesHorizontales_ul_li_a_img_p">Segui tu compra</p>
+                    </a>
+                </li>
+                <li class="cabecera_divEnlacesHorizontales_ul_li">
+                    <a href="../index.html#contacto" class="cabecera_divEnlacesHorizontales_ul_li_a" target="_blank">
+                        <img src="../imgs/contactos.png" alt="Contactos"
+                            class="cabecera_divEnlacesHorizontales_ul_li_a_img">
+                        <p class="cabecera_divEnlacesHorizontales_ul_li_a_img_p">Contacto</p>
+                    </a>
+                </li>
+                <li class="cabecera_divEnlacesHorizontales_ul_li">
+                    <a href="../index.html#sucursales" class="cabecera_divEnlacesHorizontales_ul_li_a" target="_blank">
+                        <img src="../imgs/sucursales.png" alt="Sucursales"
+                            class="cabecera_divEnlacesHorizontales_ul_li_a_img">
+                        <p class="cabecera_divEnlacesHorizontales_ul_li_a_img_p">Sucursales</p>
+                    </a>
+                </li>
+                <li class="cabecera_divEnlacesHorizontales_ul_li">
+                    <a href="../pages/financiacion.html" class="cabecera_divEnlacesHorizontales_ul_li_a"
+                        target="_blank">
+                        <img src="../imgs/creditos.png" alt="Financiacion"
+                            class="cabecera_divEnlacesHorizontales_ul_li_a_img">
+                        <p class="cabecera_divEnlacesHorizontales_ul_li_a_img_p">Financiacion</p>
+                    </a>
+                </li>
+                <li class="cabecera_divEnlacesHorizontales_ul_li">
+                    <a href="../pages/ayuda.html" class="cabecera_divEnlacesHorizontales_ul_li_a" target="_blank">
+                        <img src="../imgs/ayuda.png" alt="Preguntas Frecuentes y Ayuda"
+                            class="cabecera_divEnlacesHorizontales_ul_li_a_img">
+                        <p class="cabecera_divEnlacesHorizontales_ul_li_a_img_p">Ayuda</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Fin: vinculos superiores horizontales -->
+
+        <!-- Inicio: Panel Web !!! Usando Flexbox -->
+        <div class="cabecera_divPanelWeb">
+            <div class="cabecera_divPanelWeb_divMenuflex">
+
+                <!-- Inicio: Menu Dropdown !!! Usando BootStrat -->
+                <div class="cabecera_divPanelWeb_divMenuflex_divMenuDropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Menu
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Buscar..."
+                                    aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Buscar</button>
+                            </form>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li><a class="dropdown-item" href="../pages/cuenta.html">Mi Cuenta</a></li>
+                        <li><a class="dropdown-item" href="../pages/productos.html">Productos</a></li>
+                        <li><a class="dropdown-item" href="../pages/carrito.html">Mi Carrito</a></li>
+                        <li><a class="dropdown-item" href="../pages/financiacion.html">Financiacion</a></li>
+                        <li><a class="dropdown-item" href="../pages/ayuda.html">Ayuda</a></li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <!-- Inicio: Switch Modo Noche -->
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                            <span class="texto">Modo Noche</span>
+                            <!-- Fin: Switch Modo Noche -->
+
+
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <p>Ver.20231203r1953</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Fin: Menu Dropdown de BootStrat -->
+
+            </div>
+
+            <!-- Inicio: Logo -->
+            <div class="cabecera_divPanelWeb_divMenuflex">
+                <a href="../index.html"><img src="../imgs/logo.png" alt="Logo de IOcomm"
+                        class="cabecera_divPanelWeb_divMenuflex_a_img-logo"></a>
+                <h1>IO.com Online</h1>
+            </div>
+            <!-- Fin: Logo -->
+
+            <!-- Inicio: SubPanel -->
+            <div class="cabecera_divPanelWeb_divMenuflex">
+
+                <!-- Inicio: Panel Cuenta y Carrito -->
+                <div class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito">
+                    <ul class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul">
+                        <li class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li">
+                            <a href="../pages/cuenta.html"
+                                class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li_a" target="_blank">
+                                <img src="../imgs/cuenta.png" alt="Mi Cuenta"
+                                    class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li_a_img">
+                                <p class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li_a_img_p">Mi
+                                    Cuenta</p>
+                            </a>
+                        </li>
+                        <li class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li">
+                            <a href="../pages/carrito.html"
+                                class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li_a" target="_blank">
+                                <img src="../imgs/carrito.png" alt="Mi Carrito"
+                                    class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li_a_img">
+                                <p class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li_a_img_p">Mi
+                                    Carrito</p>
+                            </a>
+                        </li>
+                        <li class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li-sucursal">
+                            <a href="../pages/comparar.html"
+                                class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li-sucursal_a"
+                                target="_blank">
+                                <img src="../imgs/comparar2.png" alt="Comparar"
+                                    class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li-sucursal_a_img">
+                                <p
+                                    class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li-sucursal_a_img_p">
+                                    Comparar Productos</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Fin: Panel Cuenta y Carrito -->
+
+            </div>
+            <!-- Fin: SubPanel -->
+
+        </div>
+        <!-- Fin: Panel Web -->
+
+    </header>
+    <!-- Fin: Cabecera contiene vinculos superiores horizontales Responsive-->
+
+    <!-- Principal contiene iframe para abrir algunas paginas, slide y vistazo de productos mas visitados -->
+    <main class="contenedorprincipal">
+
+
+        <!-- Inicio: Contenedor Financiacion  -->
+        <div class="contenedorprincipal_contenidoprodfrecuente">
+            <p class="contenedorprincipal_contenidoprodfrecuente_p">Medios de Pago</p>
+
+            <p>Promociones Financieras</p>
+
+            <ul class="ul_mediosPago">
+                <li class="ul_li_mediosPago">
+                    <img src="../imgs/cc-galiciano.svg" alt="CC Galiciano" class="ul_li_img_mediosPago">
+                    <p>Banco Galiciano: 12 cuotas sin interés en productos seleccionados</p>
+                    <p class="p_mediosPago">Desde el 01/11/2023 al 30/11/2023 inclusive</p>
+                    <p class="p_mediosPago">C.F.T.: 0,00% T.E.A.: 0,00%</p>
+                    <p class="p_mediosPago">Válido para productos seleccionados. Los productos participantes de esta
+                        promoción podrás identificarlos con el logo del banco que figura al costado de la imagen del
+                        producto.</p>
+                </li>
+            </ul>
+
+
+            <ul class="ul_mediosPago">
+                <li class="ul_li_mediosPago">
+                    <img src="../imgs/cuotas-en-tu-resumen.jpg" alt="Cuotas en tu resumen" class="ul_li_img_mediosPago">
+                    <p>Cuotas en tu factura IOcomm</p>
+                    <p class="p_mediosPago">Desde 01/11/2023 al 30/11/2023 inclusive</p>
+                    <p class="p_mediosPago">3, 6, 9 y 12 cuotas fijas en tu factura</p>
+                    <p class="p_mediosPago">Servicio de adhesión al sistema de cobro por débito en factura de tráfico en
+                        3, 6, 9 y 12 cuotas con interés. Sujeto a evaluación crediticia y a condiciones de financiación
+                        estipuladas por la empresa. Aplica para la compra en Tienda Personal de dispositivos móviles
+                        hasta un valor de $430.000. Tené en cuenta que si tenés financiaciones en curso en tu factura,
+                        no podrás
+                        elegir esta forma de pago en tu nueva compra.</p>
+                    <p class="p_mediosPago">3 cuotas con 47,43% de interés</p>
+                    <p class="p_mediosPago_nobold">C.F.T.: 1075,26% T.N.A.: 225,73%</p>
+                    <p class="p_mediosPago">6 cuotas con 86,91% de interés</p>
+                    <p class="p_mediosPago_nobold">C.F.T.: 1007,89% T.N.A.: 219,77%</p>
+                    <p class="p_mediosPago">9 cuotas con 134,64% de interés</p>
+                    <p class="p_mediosPago_nobold">C.F.T.: 1040,44% T.N.A.: 222,69%</p>
+                    <p class="p_mediosPago">12 cuotas con 190,45% de interés</p>
+                    <p class="p_mediosPago_nobold">C.F.T.: 1097,76% T.N.A.: 227,65%</p>
+                </li>
+            </ul>
+
+            <ul class="ul_mediosPago">
+                <li class="ul_li_mediosPago">
+                    <img src="../imgs/cc-personal-pay.svg" alt="Tarjeta Personal Pay" class="ul_li_img_mediosPago">
+                    <p>Billetera Virtual PayPer</p>
+                    <p class="p_mediosPago_nobold">Desde el 01/11/2023 al 30/11/2023 inclusive</p>
+                    <p class="p_mediosPago">Hasta 20% de reintegro en tu compra</p>
+                    <p class="p_mediosPago_nobold">Pagando con tu tarjeta Personal Pay</p>
+                    <p class="p_mediosPago">Válido para compra de productos en Tienda Personal abonando con tarjeta Visa
+                        Prepaga emitida por Personal Pay. Tope de reintegro una vez por mes de $10.000 y lo verás
+                        reflejado hasta 72 hs hábiles de efectuado el pago..</p>
+                </li>
+            </ul>
+
+            <ul class="ul_mediosPago">
+                <li class="ul_li_mediosPago">
+                    <p class="p_mediosPago">12 cuotas sin interés en productos seleccionados</p>
+                    <p class="p_mediosPago_nobold">Desde el 01/11/2023 al 30/11/2023 inclusive</p>
+                    <p class="p_mediosPago">C.F.T.: 0,00% T.E.A.: 0,00%</p>
+                    <p class="p_mediosPago_nobold">Los productos participantes de esta promoción podrás identificarlos
+                        con la etiqueta de 12 cuotas sin interés que figura al costado de la imagen del producto.</p>
+                </li>
+            </ul>
+
+            <p>Planes de financiación</p>
+
+            <ul class="ul_mediosPago">
+                <li class="ul_li_mediosPago">
+                    <img src="../imgs/ahora3.webp" alt="ahora 3" class="ul_li_img_mediosPago">
+                    <p class="p_mediosPago_nobold">Ahora 3 | Sin interés</p>
+                    <p class="p_mediosPago">Desde el 01/11/2023 al 30/11/2023 inclusive</p>
+                    <p class="p_mediosPago">3 cuotas sin interés</p>
+                    <p class="p_mediosPago_nobold">Válido para la compra de productos seleccionados con tarjetas de
+                        crédito emitidas por bancos autorizados en la República Argentina.
+                        Sujeto a las condiciones de financiamiento previstas en el Reglamento Complementario Plan 3
+                        Cuotas del Programa Ahora 3 y normas complementarias.</p>
+                    <p class="p_mediosPago">C.F.T.: 0,00% T.E.A.: 0,00%</p>
+                </li>
+            </ul>
+
+
+
+
+
+        </div>
+        <!-- Fin: Contenedor Productos -->
+
+        <div class="contenedorprincipal_divComunicado">
+            <h3>
+                Actualmente estamos realizando un mantenimiento programado.
+            </h3>
+            <h3>
+                Estaremos de vuelta tan pronto como sea posible. Por favor, vuelva pronto.
+            </h3>
+            <h2>
+                Los precios estan desactualizados, ningun producto esta disponible para la compra.
+            </h2>
+
+        </div>
+
+    </main>
+
+    <!-- Pie de Pagina contiene datos de contacto, horario, ubicacion, links de ayuda y suscripcion de novedades -->
+    <footer class="piepagina">
+
+        <!-- Inicio: Ir Arriba Flotante -->
+        <div class="piepagina_divflotantesc">
+            <a href="#inicio" target="_self">
+                <img src="../imgs/subir.png" alt="ir a inicio superior de la pagina"
+                    class="piepagina_divflotante_imgsubir">
+            </a>
+        </div>
+        <!-- Fin: Ir Arriba Flotante -->
+
+        <!-- Inicio: Contacto WhatsApps Flotante -->
+        <div class="piepagina_divflotante">
+            <a href="https://api.whatsapp.com/send?phone=5435156056156&text=%C2%A1Hola%21+Estoy+en+la+tienda+y+quiero+pedir+m%C3%A1s+informaci%C3%B3n.&type=phone_number&app_absent=0"
+                target="_blank">
+                <img src="../imgs/whatsapp.png" alt="Contacto Whastapp" class="piepagina_divflotante_imgWhatsapps">
+            </a>
+
+        </div>
+        <!-- Fin: Contacto WhatsApps Flotante -->
+
+
+        <!-- Inicio: info de ayuda y suscripcion -->
+        <div class="piepagina_divSuscripcion">
+
+            <a href="pages/ayuda.html" class="cabecera_divEnlacesHorizontales_ul_li_a" target="_blank">
+                <img src="../imgs/ayuda.png" alt="ayuda" class="piepagina_divSuscripcion_img-AyudaTermCondicion">
+                <p class="piepagina_divSuscripcion_img-AyudaTermCondicion_p">Ayuda</p>
+            </a>
+
+            <a href="#" class="cabecera_divEnlacesHorizontales_ul_li_a" target="_blank">
+                <img src="../imgs/ayuda.png" alt="Terminos y Condiciones"
+                    class="piepagina_divSuscripcion_img-AyudaTermCondicion">
+                <p class="piepagina_divSuscripcion_img-AyudaTermCondicion_p">Terminos y Condiciones</p>
+            </a>
+
+            <div class="piepagina_divSuscripcion_divSuscripcionMail">
+                <div>
+                    <label for="email" class="piepagina_divSuscripcion_divSuscripcionMail_label">
+                        <span class="piepagina_divSuscripcion_divSuscripcionMail_label_span">Suscribirse a
+                            Novedades:</span></label>
+                    <input type="email" id="email" name="email" placeholder="correo@dominio.com"
+                        class="piepagina_divSuscripcion_divSuscripcionMail_inputMail">
+                    <input type="submit" value="Suscribirse"
+                        class="piepagina_divSuscripcion_divSuscripcionMail_inputBTNMail">
+                </div>
+            </div>
+        </div>
+        <!-- Fin: info de ayuda y suscripcion -->
+
+        <!-- Inicio: Datos de desarrollador Web -->
+        <div class="piepagina_divDatos">
+            <label for="comercio">Derechos Reservados (C) Martin Hernandez 2024</label>
+        </div>
+        <!-- Fin: Datos de desarrollador Web -->
+
+
+    </footer>
+    <!-- Inicio: Adjunto script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- Fin: Adjunto script Bootstrap -->
+</body>
+
+</html>

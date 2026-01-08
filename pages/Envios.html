@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envios</title>
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            width: 32px;
+            height: 32px;
+        }
+        .links {
+            display: flex;
+            gap: 10px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="./../imgs/logo.png" alt="Logo IO.com" class="logo">        
+        <div>
+            <div class="links">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <!-- Agrega más links si lo necesitas -->
+            </div>
+            <div class="dropdown">
+                <button>Menú desplegable</button>
+                <div class="dropdown-content">
+                    <a href="#">Opción 1</a>
+                    <a href="#">Opción 2</a>
+                    <!-- Agrega más opciones si lo necesitas -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Aquí va el resto de tu contenido -->
+</body>
+</html>
+
+

@@ -1,0 +1,127 @@
+:root {
+    --brand-red: #d00000;
+    --brand-dark: #1e1e1e;
+    --brand-gray: #f5f5f5;
+    --brand-text: #333;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--brand-text);
+}
+
+/* LOGO */
+.logo-svg {
+    width: 120px;
+    height: 40px;
+    font-weight: 900;
+    fill: var(--brand-dark);
+}
+
+.logo-svg .logo-3 {
+    fill: var(--brand-red);
+}
+
+/* BOTONES */
+.btn-brand {
+    background: var(--brand-red);
+    color: #fff;
+    border: none;
+}
+
+.btn-brand:hover {
+    background: #a80000;
+    color: #fff;
+}
+
+/* NAV LINKS */
+.nav-anim {
+    position: relative;
+}
+
+.nav-anim::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--brand-red);
+    left: 0;
+    bottom: 0;
+    transition: width .3s ease;
+}
+
+.nav-anim:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 480px;
+    background: url("https://images.unsplash.com/photo-1581092160562-40aa08e78837") center/cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,.75), transparent);
+}
+
+.hero-content {
+    position: relative;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-content span {
+    color: var(--brand-red);
+}
+
+/* PRODUCT CARD */
+.product-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.product-icon {
+    font-size: 2rem;
+    color: var(--brand-red);
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: 700;
+    color: var(--brand-red);
+}
+
+/* ANIMACIONES */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp .8s forwards;
+}
+
+.delay-1 { animation-delay: .3s; }
+.delay-2 { animation-delay: .6s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-card {
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.animate-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,.15);
+}

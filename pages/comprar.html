@@ -1,0 +1,393 @@
+<!--
+*********************************************************
+Autor: MH
+Version: 20240111.1953
+Descripcion: TP #2 (FlexBox, Grid, Bootstrap, Git, GitHub) Desarrollo Web para CoderHouse
+*********************************************************
+carrito.html 
+https://tincho83.github.io/FullStack_1DesarrolloWeb/
+https://github.com/Tincho83/FullStack_1DesarrolloWeb
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+*********************************************************
+-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Descripcion de sitio y SEO -->
+    <meta name="description"
+        content="Compra en IOcom los productos informaticos que necesites con garantia segun fabricante y con envio a toda la Argentina, con la mejor financiacion.">
+    <meta name="keywords"
+        content="IOCOM, Tienda compra productos insumos informatica Computacion Servicio Tecnico Cordoba Argentina">
+    <!-- <link rel="icon" type="image/svg" href="../imgs/logo.svg" sizes="32x32"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico">
+    <title>Tienda Informatica IO.com - Completando la compra</title>
+
+    <!-- link Bootstraps Online -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- link Fuente TrueFont Online -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- link CSS -->
+    <!-- <link rel="preload" href="../css/estilo.css" as="style"> -->
+    <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+
+</head>
+
+<body>
+
+    <!-- Inicio: mensaje si posee una pantalla incompatible -->
+    <div class="webSite_msjPantallaincompat">Use una pantalla que tenga 320px o superior en horizontal.</div>
+    <!-- Fin: mensaje si posee una pantalla incompatible -->
+
+
+    <!-- Inicio: Cabecera contiene vinculos superiores horizontales -->
+    <header class="cabecera" id="inicio">
+
+        <!-- Inicio: vinculos superiores horizontales -->
+        <div class="cabecera_divEnlacesHorizontales">
+            <ul class="cabecera_divEnlacesHorizontales_ul">
+                <li class="cabecera_divEnlacesHorizontales_ul_li">
+                    <a href="https://www.correoargentino.com.ar/" class="cabecera_divEnlacesHorizontales_ul_li_a"
+                        target="_blank">
+                        <img src="../imgs/enviosdeliverycorreo.png" alt="Segui tu Compra"
+                            class="cabecera_divEnlacesHorizontales_ul_li_a_img">
+                        <p class="cabecera_divEnlacesHorizontales_ul_li_a_img_p">Segui tu compra</p>
+                    </a>
+                </li>
+                <li class="cabecera_divEnlacesHorizontales_ul_li">
+                    <a href="../index.html#contacto" class="cabecera_divEnlacesHorizontales_ul_li_a" target="_blank">
+                        <img src="../imgs/contactos.png" alt="Contactos"
+                            class="cabecera_divEnlacesHorizontales_ul_li_a_img">
+                        <p class="cabecera_divEnlacesHorizontales_ul_li_a_img_p">Contacto</p>
+                    </a>
+                </li>
+                <li class="cabecera_divEnlacesHorizontales_ul_li">
+                    <a href="../index.html#sucursales" class="cabecera_divEnlacesHorizontales_ul_li_a" target="_blank">
+                        <img src="../imgs/sucursales.png" alt="Sucursales"
+                            class="cabecera_divEnlacesHorizontales_ul_li_a_img">
+                        <p class="cabecera_divEnlacesHorizontales_ul_li_a_img_p">Sucursales</p>
+                    </a>
+                </li>
+                <li class="cabecera_divEnlacesHorizontales_ul_li">
+                    <a href="../pages/financiacion.html" class="cabecera_divEnlacesHorizontales_ul_li_a"
+                        target="_blank">
+                        <img src="../imgs/creditos.png" alt="Financiacion"
+                            class="cabecera_divEnlacesHorizontales_ul_li_a_img">
+                        <p class="cabecera_divEnlacesHorizontales_ul_li_a_img_p">Financiacion</p>
+                    </a>
+                </li>
+                <li class="cabecera_divEnlacesHorizontales_ul_li">
+                    <a href="../pages/ayuda.html" class="cabecera_divEnlacesHorizontales_ul_li_a" target="_blank">
+                        <img src="../imgs/ayuda.png" alt="Preguntas Frecuentes y Ayuda"
+                            class="cabecera_divEnlacesHorizontales_ul_li_a_img">
+                        <p class="cabecera_divEnlacesHorizontales_ul_li_a_img_p">Ayuda</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Fin: vinculos superiores horizontales -->
+
+        <!-- Inicio: Panel Web !!! Usando Flexbox -->
+        <div class="cabecera_divPanelWeb">
+            <div class="cabecera_divPanelWeb_divMenuflex">
+
+                <!-- Inicio: Menu Dropdown !!! Usando BootStrat -->
+                <div class="cabecera_divPanelWeb_divMenuflex_divMenuDropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Menu
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Buscar..."
+                                    aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Buscar</button>
+                            </form>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li><a class="dropdown-item" href="../pages/cuenta.html">Mi Cuenta</a></li>
+                        <li><a class="dropdown-item" href="../pages/productos.html">Productos</a></li>
+                        <li><a class="dropdown-item" href="../pages/carrito.html">Mi Carrito</a></li>
+                        <li><a class="dropdown-item" href="../pages/financiacion.html">Financiacion</a></li>
+                        <li><a class="dropdown-item" href="../pages/ayuda.html">Ayuda</a></li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <!-- Inicio: Switch Modo Noche -->
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                            <span class="texto">Modo Noche</span>
+                            <!-- Fin: Switch Modo Noche -->
+
+
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <p>Ver.20231203r1953</p>
+                        </li>
+                        <!-- <a class="dropdown-item" href="#">Ver.20231203r1953</a></li> -->
+                    </ul>
+                </div>
+                <!-- Fin: Menu Dropdown de BootStrat -->
+
+            </div>
+
+            <!-- Inicio: Logo -->
+            <div class="cabecera_divPanelWeb_divMenuflex">
+                <a href="../index.html"><img src="../imgs/logo.png" alt="Logo de IOcomm"
+                        class="cabecera_divPanelWeb_divMenuflex_a_img-logo"></a>
+                <h1>IO.com Online</h1>
+            </div>
+            <!-- Fin: Logo -->
+
+            <!-- Inicio: SubPanel -->
+            <div class="cabecera_divPanelWeb_divMenuflex">
+                <!-- Separador -->
+                <!-- <div class="cabecera_separadorpanelizq"></div> -->
+
+                <!-- Inicio: Panel Cuenta y Carrito -->
+                <div class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito">
+                    <ul class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul">
+                        <li class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li">
+                            <a href="../pages/cuenta.html"
+                                class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li_a" target="_blank">
+                                <img src="../imgs/cuenta.png" alt="Mi Cuenta"
+                                    class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li_a_img">
+                                <p class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li_a_img_p">Mi
+                                    Cuenta</p>
+                            </a>
+                        </li>
+                        <li class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li">
+                            <a href="../pages/carrito.html"
+                                class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li_a" target="_blank">
+                                <img src="../imgs/carrito.png" alt="Mi Carrito"
+                                    class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li_a_img">
+                                <p class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li_a_img_p">Mi
+                                    Carrito</p>
+                            </a>
+                        </li>
+                        <li class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li-sucursal">
+                            <a href="../pages/comparar.html"
+                                class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li-sucursal_a"
+                                target="_blank">
+                                <img src="../imgs/comparar2.png" alt="Comparar"
+                                    class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li-sucursal_a_img">
+                                <p
+                                    class="cabecera_divPanelWeb_divMenuflex_divPanelCuentaCarrito_ul_li-sucursal_a_img_p">
+                                    Comparar Productos</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Fin: Panel Cuenta y Carrito -->
+
+            </div>
+            <!-- Fin: SubPanel -->
+
+        </div>
+        <!-- Fin: Panel Web -->
+
+    </header>
+    <!-- Fin: Cabecera contiene vinculos superiores horizontales Responsive-->
+
+    <!-- Principal contiene iframe para abrir algunas paginas, slide y vistazo de productos mas visitados -->
+    <main class="contenedorprincipal">
+
+
+        <!-- Inicio: Contenedor Cuenta  -->
+        <div class="contenedorprincipal_carrito">
+            <section class="carritoprod">
+                <h2>Este es el contenido de tu carrito.</h2>
+                <h3>Puedes finalizar la compra haciendo clic en 'Finalizar compra' o continuar comprando haciendo clic
+                    en el boton 'Continuar compra', selecciona el producto y haz clic en 'A&ntilde;adir a
+                    Carrito'</h3>
+                <a href="../pages/productos.html" class="btn btn-success">Continuar Comprando</a>
+                <div class="div_prodinteres">
+
+                    <!-- Inicio: Productos mas frecuentes -->
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento">
+                                <p
+                                    class="contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pNombreProducto">
+                                    Monitor</p>
+                                <img src="../imgs/productos/monitorasus_vg247_165hz.png" alt="Monitor asus vg247"
+                                    class="contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_imgproducto">
+                                <p
+                                    class="contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pMarcaProducto">
+                                    Marca: ASUS</p>
+                                <p
+                                    class="contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pModeloProducto">
+                                    Modelo: VG247</p>
+                                <p
+                                    class="contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pPrecioProducto">
+                                    Precio: $350000,00</p>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="col-sm-4">
+                            <div class="contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento">
+                                <p
+                                    class="contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pNombreProducto">
+                                    Fuente de Alimentacion</p>
+                                <img src="../imgs/productos/1300w_xpg_a.png" alt="Fuente de alimentacion XPG 1300 watts"
+                                    class="contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_imgproducto">
+                                <p
+                                    class="contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pMarcaProducto">
+                                    Marca: XPG</p>
+                                <p
+                                    class="contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pModeloProducto">
+                                    Modelo: CYBERCORE 80Plus</p>
+                                <p
+                                    class="contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pPrecioProducto">
+                                    Precio: $320000,00</p>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="col-sm-4">
+                            <div class="contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento">
+                                <p
+                                    class="contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pNombreProducto">
+                                    Camara USB</p>
+                                <img src="../imgs/productos/brio_a.png" alt="Camara USB Logitech"
+                                    class="contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_imgproducto">
+                                <p
+                                    class="contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pMarcaProducto">
+                                    Marca: Logitech</p>
+                                <p
+                                    class="contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pModeloProducto">
+                                    Modelo: Brio</p>
+                                <p
+                                    class="contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_pPrecioProducto">
+                                    Precio: $60000,00</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Fin: Productos mas frecuentes -->
+
+
+
+                </div>
+            </section>
+            <button
+                class="contenedorprincipal_contenidoprodfrecuente_sectionProductosMozaico_divElemento_btnAgregarCarrito">Finalizar
+                Compra</button>
+        </div>
+
+
+
+        <!-- Fin: Contenedor Cuenta -->
+
+        <div class="contenedorprincipal_divComunicado">
+            <h3>
+                Actualmente estamos realizando un mantenimiento programado.
+            </h3>
+            <h3>
+                Estaremos de vuelta tan pronto como sea posible. Por favor, vuelva pronto.
+            </h3>
+            <h2>
+                Los precios estan desactualizados, ningun producto esta disponible para la compra.
+            </h2>
+
+        </div>
+
+    </main>
+
+    <!-- Pie de Pagina contiene datos de contacto, horario, ubicacion, links de ayuda y suscripcion de novedades -->
+    <footer class="piepagina">
+
+        <!-- Inicio: Ir Arriba Flotante -->
+        <div class="piepagina_divflotantesc">
+            <a href="#inicio" target="_self">
+                <img src="../imgs/subir.png" alt="ir a inicio superior de la pagina"
+                    class="piepagina_divflotante_imgsubir">
+            </a>
+        </div>
+        <!-- Fin: Ir Arriba Flotante -->
+
+        <!-- Inicio: Contacto WhatsApps Flotante -->
+        <div class="piepagina_divflotante">
+            <a href="https://api.whatsapp.com/send?phone=5435156056156&text=%C2%A1Hola%21+Estoy+en+la+tienda+y+quiero+pedir+m%C3%A1s+informaci%C3%B3n.&type=phone_number&app_absent=0"
+                target="_blank">
+                <img src="../imgs/whatsapp.png" alt="Contacto Whastapp" class="piepagina_divflotante_imgWhatsapps">
+            </a>
+
+        </div>
+        <!-- Fin: Contacto WhatsApps Flotante -->
+
+
+        <!-- Inicio: info de ayuda y suscripcion -->
+        <div class="piepagina_divSuscripcion">
+
+            <a href="pages/ayuda.html" class="cabecera_divEnlacesHorizontales_ul_li_a" target="_blank">
+                <img src="../imgs/ayuda.png" alt="ayuda" class="piepagina_divSuscripcion_img-AyudaTermCondicion">
+                <p class="piepagina_divSuscripcion_img-AyudaTermCondicion_p">Ayuda</p>
+            </a>
+
+            <a href="#" class="cabecera_divEnlacesHorizontales_ul_li_a" target="_blank">
+                <img src="../imgs/ayuda.png" alt="Terminos y Condiciones"
+                    class="piepagina_divSuscripcion_img-AyudaTermCondicion">
+                <p class="piepagina_divSuscripcion_img-AyudaTermCondicion_p">Terminos y Condiciones</p>
+            </a>
+
+            <div class="piepagina_divSuscripcion_divSuscripcionMail">
+                <div>
+                    <label for="email" class="piepagina_divSuscripcion_divSuscripcionMail_label">
+                        <span class="piepagina_divSuscripcion_divSuscripcionMail_label_span">Suscribirse a
+                            Novedades:</span></label>
+                    <input type="email" id="email" name="email" placeholder="correo@dominio.com"
+                        class="piepagina_divSuscripcion_divSuscripcionMail_inputMail">
+                    <input type="submit" value="Suscribirse"
+                        class="piepagina_divSuscripcion_divSuscripcionMail_inputBTNMail">
+                </div>
+            </div>
+        </div>
+        <!-- Fin: info de ayuda y suscripcion -->
+
+        <!-- Inicio: Datos de desarrollador Web -->
+        <div class="piepagina_divDatos">
+            <label for="comercio">Derechos Reservados (C) Martin Hernandez 2024</label>
+        </div>
+        <!-- Fin: Datos de desarrollador Web -->
+
+
+    </footer>
+    <!-- Inicio: Adjunto script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- Fin: Adjunto script Bootstrap -->
+</body>
+
+</html>

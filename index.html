@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MODO3D Impresión 3D CBA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!-- FAVICON SVG -->
+    <link rel="icon" type="image/icon" href="./activos/iconos/modo3d.ico">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <div class="container d-flex justify-content-between flex-wrap gap-2 text-center">
+            <span>⚡ Envios en 72hs (Solo Ciudad de Cordoba)</span>
+            <span>|</span>
+            <span>🚛 Envios GRATIS a todo el país superando los 200.000$</span>
+            <span>|</span>
+            <span>💳 Recibimos transferencias</span>
+            <span>|</span>
+            <span>💬 Preguntas?</span>
+            <span>|</span>
+            <a href="#" class="fw-bold text-warning text-decoration-none">🔥 Consulte presupuesto!</a>
+        </div>
+    </div>
+
+    <!-- PROMO COUNTDOWN -->
+    <section class="promo-countdown">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+
+            <div class="promo-text">
+                <strong>🚀 Promo Inauguración</strong>
+                <span>15% OFF en tu primera impresión</span>
+                <span class="promo-code">Código: M3D15</span>
+            </div>
+
+            <div class="countdown">
+                <div><span id="days">00</span><small>Días</small></div>
+                <div><span id="hours">00</span><small>Hs</small></div>
+                <div><span id="minutes">00</span><small>Min</small></div>
+                <div><span id="seconds">00</span><small>Seg</small></div>
+            </div>
+
+            <a href="#" class="btn btn-light btn-sm rounded-pill px-4">
+                Cotizar ahora
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- HEADER ADD -->
+    <header class="sticky-top bg-white shadow-sm border-bottom">
+        <!-- <div class="container py-3 d-flex flex-column flex-md-row align-items-center gap-3"> </div> -->
+
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+            <div class="container">
+                <!-- <a class="navbar-brand fw-black fs-3" href="#">MODO<span class="text-danger">3</span>D</a> -->
+                <img src="./activos/imagenes/logo/modo3d.png" width="96px" heigth="96px">
+
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMain">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navMain">
+                    <form class="d-flex mx-lg-4 flex-grow-1 my-3 my-lg-0">
+                        <input class="form-control rounded-pill" placeholder="Buscar productos...">
+                    </form>
+
+                    <div class="d-none d-md-flex align-items-center gap-4">
+
+
+                        <ul class="navbar-nav ms-auto gap-4 align-items-lg-center">
+                            <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link nav-anim" href="#">Catálogo</a></li>
+                            <li class="nav-item"><a class="nav-link nav-anim" href="#">Servicios</a></li>
+                            <li class="nav-item"><a class="nav-link nav-anim" href="#">Nosotros</a></li>
+                            <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+
+                            <div class="d-flex align-items-center">
+                                <div class="bg-light rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width:40px;height:40px;">
+                                    👤
+                                </div>
+                                <div class="ms-2">
+                                    <span class="text-muted small text-uppercase fw-bold">Bienvenido</span><br>
+                                    <span class="fw-bold">Mi Cuenta</span>
+                                </div>
+                            </div>
+                            <li class="nav-item">                                
+                                <!-- <a class="btn btn-brand rounded-pill px-4" href="#">                                    
+                                    <i class="fas fa-shopping-cart"></i>                                    
+                                </a> -->                               
+                            </li>
+                            <div class="d-flex align-items-center position-relative">
+                                <div class="bg-light rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width:40px;height:40px;">                                    
+                                    <a class="btn btn-brand rounded-pill px-4" href="#">                                    
+                                         <i class="fas fa-shopping-cart"></i> 
+                                    </a> 
+                                </div>
+                                
+                                <span class="badge bg-danger position-absolute top-0 start-100 translate-middle">0</span>
+                                <div class="ms-2">
+                                   <!-- <span class="text-muted small text-uppercase fw-bold">Carrito</span><br> -->
+                                   <!-- <span class="fw-bold">Comprar</span> -->
+                                </div>
+                            </div>
+
+                        </ul>
+                    </div>
+                </div>
+        </nav>
+
+    </header>
+
+    <main>
+
+
+        <!-- HERO -->
+        <section class="hero-section hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <span class="badge mb-3">IMPRESIÓN 3D</span>
+                <h1 class="fade-up">Llevá tus ideas al <span>mundo real</span></h1>
+                <p class="fade-up delay-1">Impresiones 3D, insumos y equipos profesionales desde Córdoba a todo el país.
+                </p>
+                <div class="d-flex gap-3 fade-up delay-2">
+                    <a class="btn btn-danger btn-lg rounded-pill">Explorar tienda</a>
+                    <a class="btn btn-outline-light btn-lg rounded-pill">Cotizar proyecto</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFICIOS -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row g-4 text-center">
+                    <div class="col-md-3">
+                        <div class="benefit-card">
+                            <i class="fas fa-cube"></i>
+                            <h5>Diseño & Modelado 3D</h5>
+                            <p>Servicio personalizado de creación y optimización de modelos.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="benefit-card">
+                            <i class="fas fa-print"></i>
+                            <h5>Impresión de Alta Precisión</h5>
+                            <p>on impresoras Creality, Anycubic y materiales premium.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="benefit-card">
+                            <i class="fas fa-shipping-fast"></i>
+                            <h5>Entrega a todo el pais</h5>
+                            <p>Despachamos a todo el país. CABA y GBA en 24/48hs.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="benefit-card">
+                            <i class="fas fa-headset"></i>
+                            <h5>Asesoramiento</h5>
+                            <p>Te asesoramos en cada etapa de tu proyecto.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTOS -->
+        <section class="py-5 bg-light">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="fw-black mb-4">Productos destacados</h2>
+                    <a href="#" class="text-danger fw-bold">Ver catálogo</a>
+                </div>
+
+                <!-- CARRUSEL DESTACADO -->
+                <div id="productsCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#productsCarousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#productsCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#productsCarousel" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#productsCarousel" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#productsCarousel" data-bs-slide-to="4"></button>
+                        <button type="button" data-bs-target="#productsCarousel" data-bs-slide-to="5"></button>
+                        <button type="button" data-bs-target="#productsCarousel" data-bs-slide-to="6"></button>
+                        <button type="button" data-bs-target="#productsCarousel" data-bs-slide-to="7"></button>
+                    </div>
+
+                    <div class="carousel-inner rounded-5 shadow-sm">
+
+                        <div class="carousel-item active">
+                            <img src="./activos/imagenes/slide/FLORE-001.jpg" class="d-block w-100" alt="Impresión 3D">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Impresión 3D Profesional</h5>
+                                <p>Calidad industrial desde Córdoba</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./activos/imagenes/slide/FLORE-002.jpg" class="d-block w-100" alt="Impresión 3D">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Impresión 3D Profesional</h5>
+                                <p>Calidad industrial desde Córdoba</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./activos/imagenes/slide/FLORE-003.jpg" class="d-block w-100" alt="Impresión 3D">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Impresión 3D Profesional</h5>
+                                <p>Calidad industrial desde Córdoba</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./activos/imagenes/slide/FLORE-004.jpg" class="d-block w-100" alt="Impresión 3D">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Impresión 3D Profesional</h5>
+                                <p>Calidad industrial desde Córdoba</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./activos/imagenes/slide/FLORE-005.jpg" class="d-block w-100" alt="Impresión 3D">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Impresión 3D Profesional</h5>
+                                <p>Calidad industrial desde Córdoba</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./activos/imagenes/slide/SOUVE-001.jpg" class="d-block w-100" alt="Insumos 3D">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Filamentos e insumos</h5>
+                                <p>PLA, PETG, ABS y más</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./activos/imagenes/slide/JUGUE-001.jpg" class="d-block w-100" alt="Equipos 3D">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Equipos y soluciones</h5>
+                                <p>Para hobby y uso profesional</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./activos/imagenes/slide/MINEC-003.jpg" class="d-block w-100" alt="Equipos 3D">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Equipos y soluciones</h5>
+                                <p>Para hobby y uso profesional</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productsCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#productsCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+
+                </div>
+
+                <!-- GRID DE PRODUCTOS -->
+                <div class="row g-4" id="product-grid"></div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <img src="./activos/imagenes/logo/modo3d.png">
+                    <p>Especialistas en impresión 3D y fabricación digital.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contacto</h5>
+                    <p>Córdoba, Argentina</p>
+                    <p>Cel: +54 351 645 9149</p>
+
+                    <!-- INSTAGRAM -->
+                    <a href="https://www.instagram.com/modo3d.cba/" target="_blank" class="footer-social">
+                        <img src="./activos/imagenes/varios/instagram.png" alt="Instagram MODO3D">
+                        @modo3d.cba
+                    </a>
+
+                    <!-- WHATSAPP -->
+                    <a href="https://api.whatsapp.com/send?phone=543516459149&text=Hola!%20Estoy%20en%20la%20web%20de%20MODO3D%20y%20quiero%20más%20información."
+                        target="_blank" class="footer-social">
+                        <img src="./activos/imagenes/varios/whatsapp.png" alt="WhatsApp MODO3D">
+                        +54 351 645 9149
+                    </a>
+
+                </div>
+                <div class="col-md-4">
+                    <h5>Marcas</h5>
+                    <p>Creality · Anycubic · Prusa · Bambu Lab</p>
+                </div>
+            </div>
+            <div class="text-center small mt-4">
+                © 2026 MODO3D
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- BOTONES FLOTANTES -->
+    <div class="floating-buttons">
+
+        <!-- SUBIR ARRIBA -->
+        <a href="#" class="btn-float btn-up" id="btnUp" aria-label="Subir arriba">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+
+        <!-- WHATSAPP -->
+        <a href="https://api.whatsapp.com/send?phone=543516459149&text=Hola!%20Estoy%20en%20la%20web%20de%20MODO3D%20y%20quiero%20más%20información."
+            target="_blank" class="btn-float btn-whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/wapp.js"></script>
+</body>
+
+</html>
