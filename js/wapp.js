@@ -22,13 +22,14 @@ products.forEach(p => {
 });
 
 
-const countDownDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000);
+// FECHA OBJETIVO: 02/02/2026
+const countDownDate = new Date(2026, 1, 2, 0, 0, 0).getTime();
 
 const timer = setInterval(() => {
     const now = new Date().getTime();
     const distance = countDownDate - now;
 
-    if (distance < 0) {
+    if (distance <= 0) {
         clearInterval(timer);
         document.querySelector(".promo-countdown").innerHTML =
             "<div class='container text-center fw-bold'>Promo finalizada. Próximamente nuevas ofertas.</div>";
@@ -45,6 +46,7 @@ const timer = setInterval(() => {
     document.getElementById("minutes").textContent = m.toString().padStart(2, "0");
     document.getElementById("seconds").textContent = s.toString().padStart(2, "0");
 }, 1000);
+
 
 const btnUp = document.getElementById("btnUp");
 
