@@ -23,7 +23,7 @@ products.forEach(p => {
 
 
 // FECHA OBJETIVO: 02/02/2026
-const countDownDate = new Date(2026, 1, 2, 0, 0, 0).getTime();
+const countDownDate = new Date(2026, 29, 2, 0, 0, 0).getTime();
 
 const timer = setInterval(() => {
     const now = new Date().getTime();
@@ -64,4 +64,5 @@ btnUp.addEventListener("click", (e) => {
         top: 0,
         behavior: "smooth"
     });
+
 });
